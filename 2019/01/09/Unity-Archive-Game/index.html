@@ -1,0 +1,1414 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #574C57; 
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #574C57, 0 0 5px #574C57; 
+    }
+    .pace .pace-activity {
+        border-top-color: #574C57; 
+        border-left-color: #574C57; 
+    }
+</style>
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="mNEm8X1UmRdKpxhQXP9gPsBR_SWHtg45D1gjHUD2QK8" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="OMIHVYdUGP" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习,感悟,Game Design," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Iris' Wonderland" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Finally, it’s time to make a video game! However, it seems that the time is limited and the holiday is approaching… So, I just finished the game but left nothing recorded. The content below will be al">
+<meta name="keywords" content="学习,感悟,Game Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Raindrops keep falling on my head (Unity Archive Game)">
+<meta property="og:url" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/index.html">
+<meta property="og:site_name" content="Iris&#39; Wonderland">
+<meta property="og:description" content="Finally, it’s time to make a video game! However, it seems that the time is limited and the holiday is approaching… So, I just finished the game but left nothing recorded. The content below will be al">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/begin.png">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/irisintherain.jpg">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/fairylandstory.jpg">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/steampunk.png">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/objects.jpg">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/iris.png">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/irisb.png">
+<meta property="og:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/chartoflevel.png">
+<meta property="og:updated_time" content="2019-01-14T22:05:14.678Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Raindrops keep falling on my head (Unity Archive Game)">
+<meta name="twitter:description" content="Finally, it’s time to make a video game! However, it seems that the time is limited and the holiday is approaching… So, I just finished the game but left nothing recorded. The content below will be al">
+<meta name="twitter:image" content="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/begin.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/"/>
+
+
+
+
+
+  <title>Raindrops keep falling on my head (Unity Archive Game) | Iris' Wonderland</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+ <!-- 
+  -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Iris' Wonderland</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">雨天的艾莉丝和奇幻仙境</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/game" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            Game
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://irisintherain.github.io/2019/01/09/Unity-Archive-Game/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="姚麟">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Iris' Wonderland">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Raindrops keep falling on my head (Unity Archive Game)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-09T11:59:43+08:00">
+                2019-01-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Game-Design/" itemprop="url" rel="index">
+                    <span itemprop="name">Game Design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/09/Unity-Archive-Game/" class="leancloud_visitors" data-flag-title="Raindrops keep falling on my head (Unity Archive Game)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Finally, it’s time to make a video game! However, it seems that the time is limited and the holiday is approaching… So, I just finished the game but left nothing recorded. The content below will be almost the same as the report, except a video of an unfinished version and the detailed information on level design, which I forget to discuss. Hmmm, forgive me!</p>
+<p><img src="/2019/01/09/Unity-Archive-Game/begin.png"></p>
+<a id="more"></a>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Generally, it is a 3D parkour game with a small but obscure story. All interactions are using WASD to control a robot to evade objects flying by. There is a force pushing the robot down, and the robot will automatically stop without getting gears, so keep moving until reach the end. There is the truth waiting for you.</p>
+<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>I want to make a relatively complete game. So, in such a short time, it is suitable to choose simple mechanisms. I also want to present something of myself – I always use iris as the nickname online because of a light novel. Therefore, I may retell the story with my game.</p>
+<h1 id="Case-Study"><a href="#Case-Study" class="headerlink" title="Case-Study"></a>Case-Study</h1><h2 id="Iris-in-the-rain"><a href="#Iris-in-the-rain" class="headerlink" title="Iris in the rain"></a>Iris in the rain</h2><p>‘Iris in the rain’ is one of my favorite light novels. It tells a story about a robot girl called ‘Iris’ accidentally abandoned by her master. Her ‘heart’ was put into a cleaning robot like Wall-E. Because the monitor was broken, she could see black lines moving through her view like it was raining day and night.</p>
+<p>Actually, I don’t know why I am so into the novel. I just dreamt about the plot and thought it is part of mine since I am in middle school. The broken gears of the robot or the endless rain give me the feeling of sorrow and beauty. I always want to display the scenes with my works.​ </p>
+<p><img src="/2019/01/09/Unity-Archive-Game/irisintherain.jpg"></p>
+<h2 id="Fairyland-Story"><a href="#Fairyland-Story" class="headerlink" title="Fairyland Story"></a>Fairyland Story</h2><p>It is a 2D parkour game made by a couple telling a fairytale of the little girl. The color and the shape of the elements are lovely. Also, the mechanisms are just getting stars and not hitting on edge. </p>
+<p>The background of the game is turning around, and the character move vertical, which seems like the character is on a stage. It adds the feeling of a fairytale but a bit childish for what I want.</p>
+<p>In the beginning, I might make a 2D platform jumping game. However, I cannot find a suitable object in the archive. After coming across this, I want to use a similar mechanism but make it more dangerous and exciting.</p>
+<p><img src="/2019/01/09/Unity-Archive-Game/fairylandstory.jpg"></p>
+<h2 id="Steampunk-Asset"><a href="#Steampunk-Asset" class="headerlink" title="Steampunk Asset"></a>Steampunk Asset</h2><p>It is an asset I find in the unity store. I want to learn and improve the skill of how to build and render the scene. Also, I know in my game, there are gears and rain. To make the elements contrast with each other and form the feeling of both soft and hard, the art style of steampunk is suitable. So, I pick this asset as a reference. However, the real quality of it is not satisfied and what I got, at last, may just the steam to add atmosphere.</p>
+<p><img src="/2019/01/09/Unity-Archive-Game/steampunk.png"></p>
+<h1 id="Making-process"><a href="#Making-process" class="headerlink" title="Making process"></a>Making process</h1><h2 id="Modeling-and-animation"><a href="#Modeling-and-animation" class="headerlink" title="Modeling and animation"></a>Modeling and animation</h2><p>I chose some of the objects in the archive to build my tunnel and the obstructions. I copy, twist and combine them together to form a large machine. The seem-to-be endless tunnel gives players pressure and changing these peaceful objects into terrible shape.</p>
+<p>The animation of the character is a bit stiff because its body is made of gears and cannot be animated in a regular way. Moreover, I fail to make the animation of the character spinning when she gets gears. (It would cause some problem with the camera.)</p>
+<p>The gears also have been animated. However, the camera moves too fast to catch that…</p>
+<p><img src="/2019/01/09/Unity-Archive-Game/objects.jpg"></p>
+<h2 id="Programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h2><p>Because the mechanisms are simple, so I haven’t spent much time on thinking how to write. However, the idea of want to make a complete game is time-consuming. Everything from the beginning to the end should be considered.</p>
+<p>(The script to let the character move around the center of the screen may be my brand-new invention. Aha!)</p>
+<h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><h3 id="color"><a href="#color" class="headerlink" title="color"></a>color</h3><p>The grey and heavy background are formed with the objects twisted or combined in the archive. The obstruction and the character are bright and shining to contrast with the background.</p>
+<p>I used to choose orange, blue and green as the primary color. However, in order to clearly present that the character gets the gears, I change the character into purple.</p>
+<p><img src="/2019/01/09/Unity-Archive-Game/iris.png"></p>
+<h3 id="light"><a href="#light" class="headerlink" title="light"></a>light</h3><p>There are three directional light and many point light to make the shadows complicated enough to add realism. On the contrary, the blooming effects and bright object make the scene unreal.</p>
+<h3 id="character"><a href="#character" class="headerlink" title="character"></a>character</h3><p>The robot girl was a small one built with gears. After playtests, many players don’t know whether they are controlling the girl or the raindrop and even don’t she is a girl. Plus, it’s hard to see the animation of the character. So, then I change her into an order one.​   </p>
+<p><img src="/2019/01/09/Unity-Archive-Game/irisb.png"></p>
+<h3 id="levels"><a href="#levels" class="headerlink" title="levels"></a>levels</h3><p>The main obstruction change shapes and the spin speed. Also, the distribution of gears is different and on the half way the force of rain will increase. The difficulty was different with these four factors changing. The gradient of difficulty is like this: </p>
+<p><img src="/2019/01/09/Unity-Archive-Game/chartoflevel.png"></p>
+<p>The third area is full of malice. The first half force players to move throw the holes of blade otherwise iris will lose speed; The second half cannot slow down to carefully move across fast blades due to too many gears.</p>
+<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>The first version of the game is too big because of the model - I made the long tunnel manually. To solve that, I cut it down into pieces, turn certain degrees and connect them together. After that, the game is about 1/2 of the original.</p>
+<h1 id="Playtest"><a href="#Playtest" class="headerlink" title="Playtest"></a>Playtest</h1><h2 id="Playtest-1"><a href="#Playtest-1" class="headerlink" title="Playtest 1"></a>Playtest 1</h2><p>The first playtest was done when the game was almost finished. However, I received two distinct evaluations. Edward thought it is too hard to continue and disappointed with the guidance. Mika could not move long distance as well, but he likes the art style and thought it’s a lovely game.</p>
+<p>So, I tried to introduce the unclear part with words or animation. Also, I enlarge the detect area of gears to make it easier to get.</p>
+<h2 id="Playtest-2"><a href="#Playtest-2" class="headerlink" title="Playtest 2"></a>Playtest 2</h2><p>The main complaints are still about difficulty. Then players also think the music does not much the picture.</p>
+<p>However, I don’t want to change either of them. </p>
+<p>About the difficulty, I don’t think it’s that frustrated. If it is entirely due to inadequate control, I may change my mind.</p>
+<p>About the music, I want it to increase the feeling of contrast, and it matches the rhythm of push W.</p>
+<h2 id="Playtest-3"><a href="#Playtest-3" class="headerlink" title="Playtest 3"></a>Playtest 3</h2><p>It helps to find some bugs:</p>
+<ol>
+<li><p>Characters can move after death.</p>
+</li>
+<li><p>The animation does not work under certain conditions.</p>
+</li>
+<li><p>Animation plays faster than expected.</p>
+</li>
+</ol>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>This project teaches me serval truth below:</p>
+<ol>
+<li><p>It’s hard to make a complete game and make it in an elegant way. My code is terrible, and the way to make tunnel is also kind of stupid.</p>
+</li>
+<li><p>I should record things in time because sometimes ideas and thoughts just slipped away.</p>
+</li>
+<li><p>Never write the report right before the deadline.</p>
+</li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OuTk2_JWRHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/RSS.png" alt="姚麟 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>唔，听说，扫一扫上面的二维码就可以用RSS订阅我的博客啦！（虽然我也不会更新……）</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/感悟/" rel="tag"># 感悟</a>
+          
+            <a href="/tags/Game-Design/" rel="tag"># Game Design</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/09/Wuxia&Game/" rel="next" title="Wuxia & Games (Understanding Gaming Experience)">
+                <i class="fa fa-chevron-left"></i> Wuxia & Games (Understanding Gaming Experience)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/25/A-Fake-AR-Project/" rel="prev" title="A Fake AR Project">
+                A Fake AR Project <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODgxMC81Mzgw"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="姚麟" />
+          <p class="site-author-name" itemprop="name">姚麟</p>
+           
+              <p class="site-description motion-element" itemprop="description">于是，让世界变得更加有趣吧！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5460881886/" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/profile.php?id=100022477446903" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://user.qzone.qq.com/871914370/" target="_blank" title="Qzone">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  Qzone
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sodcn.jiangnan.edu.cn/" title="江南大学设计学院" target="_blank">江南大学设计学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.darksouls.jp/" title="太阳骑士" target="_blank">太阳骑士</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.fezgame.com/" title="FEZ" target="_blank">FEZ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/10773510/" title="豆瓣-雨天的艾莉絲" target="_blank">豆瓣-雨天的艾莉絲</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.haruhi.tv/" title="SOS团官网" target="_blank">SOS团官网</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fda7a10e"
+    });
+  daovoice('update');
+  </script>
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Motivation"><span class="nav-number">2.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case-Study"><span class="nav-number">3.</span> <span class="nav-text">Case-Study</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Iris-in-the-rain"><span class="nav-number">3.1.</span> <span class="nav-text">Iris in the rain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fairyland-Story"><span class="nav-number">3.2.</span> <span class="nav-text">Fairyland Story</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Steampunk-Asset"><span class="nav-number">3.3.</span> <span class="nav-text">Steampunk Asset</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Making-process"><span class="nav-number">4.</span> <span class="nav-text">Making process</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Modeling-and-animation"><span class="nav-number">4.1.</span> <span class="nav-text">Modeling and animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Programming"><span class="nav-number">4.2.</span> <span class="nav-text">Programming</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Design"><span class="nav-number">4.3.</span> <span class="nav-text">Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#color"><span class="nav-number">4.3.1.</span> <span class="nav-text">color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#light"><span class="nav-number">4.3.2.</span> <span class="nav-text">light</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#character"><span class="nav-number">4.3.3.</span> <span class="nav-text">character</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#levels"><span class="nav-number">4.3.4.</span> <span class="nav-text">levels</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization"><span class="nav-number">4.4.</span> <span class="nav-text">Optimization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Playtest"><span class="nav-number">5.</span> <span class="nav-text">Playtest</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Playtest-1"><span class="nav-number">5.1.</span> <span class="nav-text">Playtest 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Playtest-2"><span class="nav-number">5.2.</span> <span class="nav-text">Playtest 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Playtest-3"><span class="nav-number">5.3.</span> <span class="nav-text">Playtest 3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reflection"><span class="nav-number">6.</span> <span class="nav-text">Reflection</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-sun-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">姚麟</span>
+</div>
+
+
+<div class="powered-by">
+    Praise the sun
+</div>
+
+<div class="theme-info">
+  Do come again
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bsQGgiqM52ypXCVqQbJk4jHX-gzGzoHsz", "ry0P8CwRw60TfhYdeQlUfQjI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
