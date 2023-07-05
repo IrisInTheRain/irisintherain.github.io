@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://rainyiris.cc/img/Hexo-NexT%20Theme%20Settings-Scene.jpg">
 <meta property="article:published_time" content="2016-01-08T02:31:15.000Z">
-<meta property="article:modified_time" content="2023-07-05T13:02:15.015Z">
+<meta property="article:modified_time" content="2023-07-05T13:20:40.552Z">
 <meta property="article:author" content="姚麟">
 <meta property="article:tag" content="旧文章">
 <meta property="article:tag" content="技术">
@@ -279,36 +279,36 @@
                 
                 <p><img src="/img/Hexo-NexT%20Theme%20Settings-Scene.jpg" srcset="/img/loading.gif" lazyload></p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>前些天刚学着用Github+Hexo搭建了自己的博客，选了广受欢迎的NexT主题。配置主题的时候遇到了许多问题。好在网上有各个dalao们的文章铺平道路，否则必然会折腾得死去活来。<br>dalao们也许是万能的，但总归有涉及不到的地方，本文就一些网上没有提到的配置问题稍作补遗。  </p>
-<h1 id="修改底部logo栏中的爱心图标"><a href="#修改底部logo栏中的爱心图标" class="headerlink" title="修改底部logo栏中的爱心图标"></a><a href="#%E4%BF%AE%E6%94%B9%E5%BA%95%E9%83%A8logo%E6%A0%8F%E4%B8%AD%E7%9A%84%E7%88%B1%E5%BF%83%E5%9B%BE%E6%A0%87" title="修改底部logo栏中的爱心图标"></a>修改底部logo栏中的爱心图标</h1><p>关于修改底部的logo栏的详细内容可转到</p>
+<h1 id="修改底部logo栏中的爱心图标"><a href="#修改底部logo栏中的爱心图标" class="headerlink" title="修改底部logo栏中的爱心图标"></a>修改底部logo栏中的爱心图标</h1><p>关于修改底部的logo栏的详细内容可转到</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/4fbc57269f1b">Hexo-Next底部powered by的logo栏更改以及注意事项</a></p>
 </blockquote>
 <p>而要修改年份和作者中的爱心图标：</p>
-<h2 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a><a href="#%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95" title="通用方法"></a>通用方法</h2><p>打开<code>\themes\next\layout\_partials\footer.swig</code><br>找到  </p>
+<h2 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h2><p>打开<code>\themes\next\layout\_partials\footer.swig</code><br>找到  </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;with-love&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-heart&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>把中间的<code>&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;</code>改成你想要的fontawesome图标<br>如修改成  </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;with-love&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-sun-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>就可以成为一名伟大的太阳骑士！</p>
-<h2 id="新版方法"><a href="#新版方法" class="headerlink" title="新版方法"></a><a href="#%E6%96%B0%E7%89%88%E6%96%B9%E6%B3%95" title="新版方法"></a>新版方法</h2><p>打开<code>\themes\next\_config.yml</code><br>找到  </p>
+<h2 id="新版方法"><a href="#新版方法" class="headerlink" title="新版方法"></a>新版方法</h2><p>打开<code>\themes\next\_config.yml</code><br>找到  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"># <span class="hljs-attribute">icon</span> between year and author <span class="hljs-keyword">@Footer</span> &lt;br&gt;<span class="hljs-attribute">authoricon</span>: heart<br></code></pre></td></tr></table></figure>
 
 <p>把heart改成你想要的fontawesome图标名如：<code>sun-o</code></p>
-<h2 id="附fontawesome图标库"><a href="#附fontawesome图标库" class="headerlink" title="附fontawesome图标库"></a><a href="#%E9%99%84fontawesome%E5%9B%BE%E6%A0%87%E5%BA%93" title="附fontawesome图标库"></a>附<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">fontawesome图标库</a></h2><h1 id="背景动效和优化手机端显示"><a href="#背景动效和优化手机端显示" class="headerlink" title="背景动效和优化手机端显示"></a><a href="#%E8%83%8C%E6%99%AF%E5%8A%A8%E6%95%88%E5%92%8C%E4%BC%98%E5%8C%96%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%98%BE%E7%A4%BA" title="背景动效和优化手机端显示"></a>背景动效和优化手机端显示</h1><p>关于添加背景动效的详细内容可转到</p>
+<h2 id="附fontawesome图标库"><a href="#附fontawesome图标库" class="headerlink" title="附fontawesome图标库"></a>附<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">fontawesome图标库</a></h2><h1 id="背景动效和优化手机端显示"><a href="#背景动效和优化手机端显示" class="headerlink" title="背景动效和优化手机端显示"></a>背景动效和优化手机端显示</h1><p>关于添加背景动效的详细内容可转到</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/ea3990fe76f6">搭建博客使用hexo的next主题如何添加动态背景</a></p>
 </blockquote>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a><a href="#%E9%97%AE%E9%A2%98" title="问题"></a>问题</h2><p>添加背景动效以后，从手机端看起来会显得十分杂乱无章，线条也有些模糊。推荐改成白色背景使页面变得简洁。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a><a href="#%E6%96%B9%E6%B3%95" title="方法"></a>方法</h2><h3 id="使用的是Pisces主题"><a href="#使用的是Pisces主题" class="headerlink" title="使用的是Pisces主题"></a><a href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFPisces%E4%B8%BB%E9%A2%98" title="使用的是Pisces主题"></a>使用的是Pisces主题</h3><p>打开<code>\themes\next\source\css\_schemes\Pisces\_layout.styl</code><br>找到<code>.content-wrap</code>内  </p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>添加背景动效以后，从手机端看起来会显得十分杂乱无章，线条也有些模糊。推荐改成白色背景使页面变得简洁。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="使用的是Pisces主题"><a href="#使用的是Pisces主题" class="headerlink" title="使用的是Pisces主题"></a>使用的是Pisces主题</h3><p>打开<code>\themes\next\source\css\_schemes\Pisces\_layout.styl</code><br>找到<code>.content-wrap</code>内  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">+mobile() &#123; &lt;br&gt;<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>; &lt;br&gt;<span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>; &lt;br&gt;<span class="hljs-attribute">min-height</span>: auto; &lt;br&gt;<span class="hljs-attribute">border-radius</span>: initial; &lt;br&gt;&#125;<br></code></pre></td></tr></table></figure>
 
 <p>大括号内添加一行<code>background : white;</code></p>
-<h3 id="使用的是Muse主题"><a href="#使用的是Muse主题" class="headerlink" title="使用的是Muse主题"></a><a href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFMuse%E4%B8%BB%E9%A2%98" title="使用的是Muse主题"></a>使用的是Muse主题</h3><p>打开<code>\themes\next\source\css\_schemes\Muse\_layout.styl</code><br>找到<code>.header-inner, .container .main-inner, .footer-inner</code>内  </p>
+<h3 id="使用的是Muse主题"><a href="#使用的是Muse主题" class="headerlink" title="使用的是Muse主题"></a>使用的是Muse主题</h3><p>打开<code>\themes\next\source\css\_schemes\Muse\_layout.styl</code><br>找到<code>.header-inner, .container .main-inner, .footer-inner</code>内  </p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">+<span class="hljs-built_in">mobile</span>() &#123; &lt;br&gt;<span class="hljs-attribute">width</span>: auto; &lt;br&gt;&#125;<br></code></pre></td></tr></table></figure>
 
 <p>大括号内添加一行<code>background : white;</code></p>
-<h1 id="增加百度HTTPS搜索引擎验证"><a href="#增加百度HTTPS搜索引擎验证" class="headerlink" title="增加百度HTTPS搜索引擎验证"></a><a href="#%E5%A2%9E%E5%8A%A0%E7%99%BE%E5%BA%A6HTTPS%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AA%8C%E8%AF%81" title="增加百度HTTPS搜索引擎验证"></a>增加百度HTTPS搜索引擎验证</h1><p>关于增加搜索引擎验证的详细内容可转到</p>
+<h1 id="增加百度HTTPS搜索引擎验证"><a href="#增加百度HTTPS搜索引擎验证" class="headerlink" title="增加百度HTTPS搜索引擎验证"></a>增加百度HTTPS搜索引擎验证</h1><p>关于增加搜索引擎验证的详细内容可转到</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/ea6776938bd6">HEXO next 主题增加搜索引擎验证</a></p>
 </blockquote>
