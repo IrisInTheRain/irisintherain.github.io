@@ -91,35 +91,6 @@
   
   
   <entry>
-    <title>A Fake AR Project</title>
-    <link href="/2019/06/25/A-Fake-AR-Project/"/>
-    <url>/2019/06/25/A-Fake-AR-Project/</url>
-    
-    <content type="html"><![CDATA[<p><img src="/img/A-Fake-AR-Project-0.jpg"></p><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The game is a (fake) AR project that allows players to discover a magical world in the mobile and see the real world at the same time.</p><p>This project targets at these three points.</p><ol><li><p>test a new flow to make 3D games with MagicaVoxel.</p></li><li><p>test how much the real world elements affect players.</p></li><li><p>analysis if jump scare still works if using a cute art style.</p></li></ol><p>Gameplay</p><p>Players can wipe away mist in the scene to promote the development of the plot. A small story would slower appear. At the end of the game, a monster would jump into the scene without any precursor.</p><p>Story</p><p>It is like a small comic. The prototype of the story comes from the lunar tower and solar tower in dark souls 2.</p><p><img src="/img/A-Fake-AR-Project-1.jpg"></p><p><img src="/img/A-Fake-AR-Project-2.jpg"><img src="/img/A-Fake-AR-Project-3.jpg"><img src="/img/A-Fake-AR-Project-4.jpg"><img src="/img/A-Fake-AR-Project-5.jpg"><img src="/img/A-Fake-AR-Project-6.jpg"><img src="/img/A-Fake-AR-Project-7.jpg"><img src="/img/A-Fake-AR-Project-8.jpg"></p><h1 id="Case-study-and-Fake-AR"><a href="#Case-study-and-Fake-AR" class="headerlink" title="Case study and Fake AR"></a>Case study and Fake AR</h1><h2 id="Case-study"><a href="#Case-study" class="headerlink" title="Case study"></a>Case study</h2><p>There are many “AR” sky apps like Sky map and Star Walk 2. These apps are designed to teach basic astronomy knowledge – or a good trick for a date. Because it is incredible to look at the sky, seeing stars shining clearly in modern cities. It is like you jump in the rabbit hole, falling on the halfway to the magic world. Many AR games typically lack a close crossmedia integration of the surroundings, and often annotate or extend the environment rather than modifying and altering it(Herbst et al., 2019). However, in this case, it combines with the environment well. It is stimulating and enjoyable. This experience interests me to discover how the real world elements affect players.</p><h2 id="Fake-AR"><a href="#Fake-AR" class="headerlink" title="Fake AR"></a>Fake AR</h2><p>One of the similarities of these apps is that they all have a function called augmented reality mode. However, the truth is that they don’t use the AR kit to match the pictures or models with the sky. All they need is to detect the angle of the phone using the gyroscope. This method spares me much time to concentrate on other parts of the game. ( actually, there are some complex parts about the angle and the stable movement of the camera.)</p><h1 id="New-Workflow"><a href="#New-Workflow" class="headerlink" title="New Workflow"></a>New Workflow</h1><p>In this project, I didn’t use the modeling and material painter tools before. I try to use MagicaVoxel to build the scene. The advancement of this tool is light – it is exceptionally suitable to do light or mobile project for the following reasons.</p><ol><li><p>The modeling in this software is to add blocks like the toy blocks. It is easy to understand and easy to learn.</p></li><li><p>Because models are just blocks. The size of the file is tiny.</p></li><li><p>The paint procedure is simple and can export materials.</p></li><li><p>After some practice, the outcome can be good looking.</p></li></ol><p><img src="/img/A-Fake-AR-Project-monster.jpg"></p><h1 id="Art-style"><a href="#Art-style" class="headerlink" title="Art style"></a>Art style</h1><p>As I mentioned in the beginning, all the models in the game should be cute. So, to make the game like a dark fairy tale, I tried to adjust the lights and shadows to form a sharp contrast.</p><p>And, this game is different from the other projects before. It runs on mobile, and my phone is inferior. So, it is kind of hard to reach a balance between the performance and the quality of images.</p><p><img src="/img/A-Fake-AR-Project-performance.jpg"></p><h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>The thinking and result of test 2</p><p>User feels that the game presentation with 3D and AR technology is more interesting than general 2D game, the immersion of virtual object in real world also brings unique game ambient and touch-screen gameplay makes the player becomes more engaged to the game(Santoso, 2019). This makes a paradox that when a player more engaged into a game, how they feel the real world in AR case.</p><p>In the play test, 5 in 10 people saw that I made a face to them when the transparency of the camera is 60%. However, when the transparency is 0, everyone noticed my actions.</p><p>It’s like the real world has become a part of the game experience.</p><p>Problems</p><ol><li><p>Many players response that it is tired and hard to raise the phone to see the sky. It may because my participants are almost all programmers or designer who sit all day long. Comparing to the AR sky apps, they suggest users to lying on the ground to explore the sky, while my app requires players to turn around. So, it may be not proper to set high targets in my case.</p></li><li><p>Some players can’t find the right route to finish the game. Although I have made at least one guide in each part, like the ship encountering, the queen falling and the musical note flying, it is still a bit hard to find the target because of the following reasons.</p></li></ol><p>a. all the elements are in one scene. So players can be distracted by the environment like the tree.</p><p>b. the targets are scattered around the map, and the angle is three dimensions.</p><p>c. the mist to cover the models cannot be load properly until the camera targets directly at the mist – I still don’t know how to fix it.</p><p>I tried serval ways to give more guidance to players, like David’s advice to add a bird or butterfly to lead the camera. However, it seems that the bird can only be close to the camera to be seen and functions just like an arrow to indicate the enemy in an action game. The logic is not flying to the target but to point the position in the screen space. So, I am stilling trying to program that properly.</p><ol start="3"><li>The monster at the end of the game is not scary enough. Actually, there is about 40 percent of participants being sacred. And, I noticed that it depends on whether the volume is high enough. In this game, to test if the jump scare works well, the environment is totally normal as the control group. So, I hope in the final project, when the environment becomes weird, the whole game would become scarier.</li></ol><p>(I like the monster after all.)</p><p><img src="/img/A-Fake-AR-Project-ship.jpg"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>求学</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>旧文章</tag>
-      
-      <tag>学习</tag>
-      
-      <tag>设定</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>A Story about My Grandma</title>
     <link href="/2019/06/25/A-Story-about-My-Grandma/"/>
     <url>/2019/06/25/A-Story-about-My-Grandma/</url>
@@ -141,6 +112,35 @@
       <tag>学习</tag>
       
       <tag>中二</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A Fake AR Project</title>
+    <link href="/2019/06/25/A-Fake-AR-Project/"/>
+    <url>/2019/06/25/A-Fake-AR-Project/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/img/A-Fake-AR-Project-0.jpg"></p><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The game is a (fake) AR project that allows players to discover a magical world in the mobile and see the real world at the same time.</p><p>This project targets at these three points.</p><ol><li><p>test a new flow to make 3D games with MagicaVoxel.</p></li><li><p>test how much the real world elements affect players.</p></li><li><p>analysis if jump scare still works if using a cute art style.</p></li></ol><p>Gameplay</p><p>Players can wipe away mist in the scene to promote the development of the plot. A small story would slower appear. At the end of the game, a monster would jump into the scene without any precursor.</p><p>Story</p><p>It is like a small comic. The prototype of the story comes from the lunar tower and solar tower in dark souls 2.</p><p><img src="/img/A-Fake-AR-Project-1.jpg"></p><p><img src="/img/A-Fake-AR-Project-2.jpg"><img src="/img/A-Fake-AR-Project-3.jpg"><img src="/img/A-Fake-AR-Project-4.jpg"><img src="/img/A-Fake-AR-Project-5.jpg"><img src="/img/A-Fake-AR-Project-6.jpg"><img src="/img/A-Fake-AR-Project-7.jpg"><img src="/img/A-Fake-AR-Project-8.jpg"></p><h1 id="Case-study-and-Fake-AR"><a href="#Case-study-and-Fake-AR" class="headerlink" title="Case study and Fake AR"></a>Case study and Fake AR</h1><h2 id="Case-study"><a href="#Case-study" class="headerlink" title="Case study"></a>Case study</h2><p>There are many “AR” sky apps like Sky map and Star Walk 2. These apps are designed to teach basic astronomy knowledge – or a good trick for a date. Because it is incredible to look at the sky, seeing stars shining clearly in modern cities. It is like you jump in the rabbit hole, falling on the halfway to the magic world. Many AR games typically lack a close crossmedia integration of the surroundings, and often annotate or extend the environment rather than modifying and altering it(Herbst et al., 2019). However, in this case, it combines with the environment well. It is stimulating and enjoyable. This experience interests me to discover how the real world elements affect players.</p><h2 id="Fake-AR"><a href="#Fake-AR" class="headerlink" title="Fake AR"></a>Fake AR</h2><p>One of the similarities of these apps is that they all have a function called augmented reality mode. However, the truth is that they don’t use the AR kit to match the pictures or models with the sky. All they need is to detect the angle of the phone using the gyroscope. This method spares me much time to concentrate on other parts of the game. ( actually, there are some complex parts about the angle and the stable movement of the camera.)</p><h1 id="New-Workflow"><a href="#New-Workflow" class="headerlink" title="New Workflow"></a>New Workflow</h1><p>In this project, I didn’t use the modeling and material painter tools before. I try to use MagicaVoxel to build the scene. The advancement of this tool is light – it is exceptionally suitable to do light or mobile project for the following reasons.</p><ol><li><p>The modeling in this software is to add blocks like the toy blocks. It is easy to understand and easy to learn.</p></li><li><p>Because models are just blocks. The size of the file is tiny.</p></li><li><p>The paint procedure is simple and can export materials.</p></li><li><p>After some practice, the outcome can be good looking.</p></li></ol><p><img src="/img/A-Fake-AR-Project-monster.jpg"></p><h1 id="Art-style"><a href="#Art-style" class="headerlink" title="Art style"></a>Art style</h1><p>As I mentioned in the beginning, all the models in the game should be cute. So, to make the game like a dark fairy tale, I tried to adjust the lights and shadows to form a sharp contrast.</p><p>And, this game is different from the other projects before. It runs on mobile, and my phone is inferior. So, it is kind of hard to reach a balance between the performance and the quality of images.</p><p><img src="/img/A-Fake-AR-Project-performance.jpg"></p><h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>The thinking and result of test 2</p><p>User feels that the game presentation with 3D and AR technology is more interesting than general 2D game, the immersion of virtual object in real world also brings unique game ambient and touch-screen gameplay makes the player becomes more engaged to the game(Santoso, 2019). This makes a paradox that when a player more engaged into a game, how they feel the real world in AR case.</p><p>In the play test, 5 in 10 people saw that I made a face to them when the transparency of the camera is 60%. However, when the transparency is 0, everyone noticed my actions.</p><p>It’s like the real world has become a part of the game experience.</p><p>Problems</p><ol><li><p>Many players response that it is tired and hard to raise the phone to see the sky. It may because my participants are almost all programmers or designer who sit all day long. Comparing to the AR sky apps, they suggest users to lying on the ground to explore the sky, while my app requires players to turn around. So, it may be not proper to set high targets in my case.</p></li><li><p>Some players can’t find the right route to finish the game. Although I have made at least one guide in each part, like the ship encountering, the queen falling and the musical note flying, it is still a bit hard to find the target because of the following reasons.</p></li></ol><p>a. all the elements are in one scene. So players can be distracted by the environment like the tree.</p><p>b. the targets are scattered around the map, and the angle is three dimensions.</p><p>c. the mist to cover the models cannot be load properly until the camera targets directly at the mist – I still don’t know how to fix it.</p><p>I tried serval ways to give more guidance to players, like David’s advice to add a bird or butterfly to lead the camera. However, it seems that the bird can only be close to the camera to be seen and functions just like an arrow to indicate the enemy in an action game. The logic is not flying to the target but to point the position in the screen space. So, I am stilling trying to program that properly.</p><ol start="3"><li>The monster at the end of the game is not scary enough. Actually, there is about 40 percent of participants being sacred. And, I noticed that it depends on whether the volume is high enough. In this game, to test if the jump scare works well, the environment is totally normal as the control group. So, I hope in the final project, when the environment becomes weird, the whole game would become scarier.</li></ol><p>(I like the monster after all.)</p><p><img src="/img/A-Fake-AR-Project-ship.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>求学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>旧文章</tag>
+      
+      <tag>学习</tag>
+      
+      <tag>设定</tag>
       
     </tags>
     
@@ -225,9 +225,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -254,9 +254,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -312,9 +312,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -370,9 +370,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -399,9 +399,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -660,9 +660,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -689,9 +689,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -718,9 +718,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
@@ -747,9 +747,9 @@
       
       <tag>旧文章</tag>
       
-      <tag>日常</tag>
-      
       <tag>中二</tag>
+      
+      <tag>日常</tag>
       
     </tags>
     
