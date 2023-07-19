@@ -16,26 +16,26 @@
   <meta name="author" content="姚麟">
   <meta name="keywords" content="">
   
-    <meta name="description" content="上班时做的一些音游Demo。  当时还没有制配合FL Studio生成谱面的工具，故使用Unity商店提供的Rythmy插件用于歌曲节奏自动识别——节奏点和爽感并没有手动设置谱面好，不过视觉风格创意&#x2F;玩法创意都给后面的工作提供了帮助。 陀螺仪控制的音游左侧是触屏控制版本用于对比右侧的陀螺仪控制版本。    var player &#x3D; new DogePlayer({     contai">
+    <meta name="description" content="说明这里仅提供一种通过BigQuery获取GA&#x2F;FB留存的方法 ——一定有人会问，GA&#x2F;FB不是已经整理好图表显示留存信息了吗？为什么还要多此一举通过sql查询呢？ 原因如下： GA和FB显示的留存并未给出具体计算方法，其中新用户定义&#x2F;用户第一日起止时间等信息并未明确。导致进行其他更细致的数据分析时，如复核留存，则会发现计算数据总与面板给出的有些许偏差，无法确定是小">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一些音游Demo">
-<meta property="og:url" content="https://rainyiris.cc/2020/06/01/Music-Game-Demo/index.html">
+<meta property="og:title" content="BigQuery数据计算GA&#x2F;FB留存">
+<meta property="og:url" content="https://rainyiris.cc/2021/01/10/Data-Analytics-Google/index.html">
 <meta property="og:site_name" content="Iris&#39; Wonderland">
-<meta property="og:description" content="上班时做的一些音游Demo。  当时还没有制配合FL Studio生成谱面的工具，故使用Unity商店提供的Rythmy插件用于歌曲节奏自动识别——节奏点和爽感并没有手动设置谱面好，不过视觉风格创意&#x2F;玩法创意都给后面的工作提供了帮助。 陀螺仪控制的音游左侧是触屏控制版本用于对比右侧的陀螺仪控制版本。    var player &#x3D; new DogePlayer({     contai">
+<meta property="og:description" content="说明这里仅提供一种通过BigQuery获取GA&#x2F;FB留存的方法 ——一定有人会问，GA&#x2F;FB不是已经整理好图表显示留存信息了吗？为什么还要多此一举通过sql查询呢？ 原因如下： GA和FB显示的留存并未给出具体计算方法，其中新用户定义&#x2F;用户第一日起止时间等信息并未明确。导致进行其他更细致的数据分析时，如复核留存，则会发现计算数据总与面板给出的有些许偏差，无法确定是小">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://rainyiris.cc/img/Music-Game-Demo-Scene.jpg">
-<meta property="article:published_time" content="2020-06-01T02:31:15.000Z">
-<meta property="article:modified_time" content="2023-07-05T15:19:38.406Z">
+<meta property="og:image" content="https://rainyiris.cc/img/Data-Analytics-Google-Scene.jpg.jpg">
+<meta property="article:published_time" content="2021-01-10T02:31:15.000Z">
+<meta property="article:modified_time" content="2023-07-19T06:28:41.263Z">
 <meta property="article:author" content="姚麟">
-<meta property="article:tag" content="设定">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="技术">
 <meta property="article:tag" content="尘世间">
-<meta property="article:tag" content="Demo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://rainyiris.cc/img/Music-Game-Demo-Scene.jpg">
+<meta name="twitter:image" content="https://rainyiris.cc/img/Data-Analytics-Google-Scene.jpg.jpg">
   
   
   
-  <title>一些音游Demo - Iris&#39; Wonderland</title>
+  <title>BigQuery数据计算GA/FB留存 - Iris&#39; Wonderland</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="一些音游Demo"></span>
+            <span id="subtitle" data-typed-text="BigQuery数据计算GA/FB留存"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-06-01 10:31" pubdate>
-          2020年6月1日 上午
+        <time datetime="2021-01-10 10:31" pubdate>
+          2021年1月10日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          585 字
+          1.7k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          5 分钟
+          15 分钟
         
       </span>
     
@@ -273,48 +273,27 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">一些音游Demo</h1>
+            <h1 style="display: none">BigQuery数据计算GA/FB留存</h1>
             
             
               <div class="markdown-body">
                 
-                <p><img src="/img/Music-Game-Demo-Scene.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>上班时做的一些音游Demo。</p>
-<hr>
-<p>当时还没有制配合FL Studio生成谱面的工具，故使用Unity商店提供的Rythmy插件用于歌曲节奏自动识别——节奏点和爽感并没有手动设置谱面好，不过视觉风格创意&#x2F;玩法创意都给后面的工作提供了帮助。</p>
-<h1 id="陀螺仪控制的音游"><a href="#陀螺仪控制的音游" class="headerlink" title="陀螺仪控制的音游"></a>陀螺仪控制的音游</h1><p>左侧是触屏控制版本用于对比右侧的陀螺仪控制版本。</p>
-<div id="player_c9c7b024ac5b4984"></div>
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-<script type="text/javascript">
-var player = new DogePlayer({
-    container: document.getElementById('player_c9c7b024ac5b4984'),
-    userId: 6973,
-    vcode: 'c9c7b024ac5b4984',
-    autoPlay: false
-});
-</script>
+                <p><img src="/img/Data-Analytics-Google-Scene.jpg" srcset="/img/loading.gif" lazyload></p>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>这里仅提供一种通过BigQuery获取GA&#x2F;FB留存的方法</p>
+<p>——一定有人会问，GA&#x2F;FB不是已经整理好图表显示留存信息了吗？为什么还要多此一举通过sql查询呢？</p>
+<p>原因如下：</p>
+<p>GA和FB显示的留存并未给出具体计算方法，其中新用户定义&#x2F;用户第一日起止时间等信息并未明确。导致进行其他更细致的数据分析时，如复核留存，则会发现计算数据总与面板给出的有些许偏差，无法确定是小数取舍问题，还是数据选取问题。</p>
+<p>故如能确定原始数据留存计算的方法，则可以给后续的数据分析工作提供一个与平台一致的、明确的基准。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>直接给出sql：</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">WITH <br>first_open AS (<br> <span class="hljs-keyword">SELECT</span> DATE(TIMESTAMP_MICROS(event_timestamp),<span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>) <span class="hljs-keyword">AS</span> first_open_dt, <br>user_pseudo_id<br> <span class="hljs-keyword">FROM</span> <span class="hljs-symbol">`YourAppChartID.events_*`</span> <br><span class="hljs-keyword">WHERE</span>  <br> event_name = <span class="hljs-string">&quot;first_open&quot;</span> <br><span class="hljs-keyword">AND</span> geo.country &lt;&gt; <span class="hljs-string">&quot;China&quot;</span><br> <span class="hljs-keyword">AND</span> app_info.version = <span class="hljs-string">&quot;1.0.20&quot;</span><br>-- <span class="hljs-keyword">AND</span> user_pseudo_id <span class="hljs-keyword">in</span> (<br>--<span class="hljs-keyword">SELECT</span> user_pseudo_id<br>--<span class="hljs-keyword">FROM</span> <span class="hljs-symbol">`YourAppChartID.events_*`</span> <br>--<span class="hljs-keyword">WHERE</span> event_name <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%YourDefineData%&#x27;</span>)<br>),<br>active <span class="hljs-keyword">as</span> (<br> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> DATE(TIMESTAMP_MICROS(event_timestamp),<span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>) <span class="hljs-keyword">AS</span> active_dt, <br>user_pseudo_id<br> <span class="hljs-keyword">FROM</span> <span class="hljs-symbol">`YourAppChartID.events_*`</span> <br><span class="hljs-keyword">WHERE</span> <br>event_name &lt;&gt; <span class="hljs-string">&quot;app_remove&quot;</span> <br>), cohort_size <span class="hljs-keyword">AS</span> (<br> <span class="hljs-keyword">SELECT</span> first_open_dt, <br><span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> first_open.user_pseudo_id) <span class="hljs-keyword">AS</span> users<br> <span class="hljs-keyword">FROM</span> first_open<br> <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-number">1</span><br>)<br> <span class="hljs-keyword">SELECT</span> first_open.first_open_dt <span class="hljs-keyword">AS</span> first_open_dt, <br>DATE_DIFF(active.active_dt, first_open.first_open_dt, DAY) <span class="hljs-keyword">AS</span> days, <br>cohort_size.users <span class="hljs-keyword">AS</span> cohort_users, <br><span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> active.user_pseudo_id) <span class="hljs-keyword">as</span> retained,<br> SAFE_DIVIDE(<span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> active.user_pseudo_id), cohort_size.users) <span class="hljs-keyword">AS</span> retention_rate<br> <span class="hljs-keyword">FROM</span> first_open<br> <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> cohort_size<br> <span class="hljs-keyword">ON</span> first_open.first_open_dt = cohort_size.first_open_dt<br> <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> active<br> <span class="hljs-keyword">ON</span> first_open.user_pseudo_id = active.user_pseudo_id<br> <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span> <span class="hljs-keyword">HAVING</span> days <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">7</span>,<span class="hljs-number">30</span>)<br> <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-number">1</span>,<span class="hljs-number">2</span> <span class="hljs-keyword">ASC</span>;<br></code></pre></td></tr></table></figure>
 
-<h1 id="战斗元素的音游"><a href="#战斗元素的音游" class="headerlink" title="战斗元素的音游"></a>战斗元素的音游</h1><div id="player_f215b6311b537cb2"></div>
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-<script type="text/javascript">
-var player = new DogePlayer({
-    container: document.getElementById('player_f215b6311b537cb2'),
-    userId: 6973,
-    vcode: 'f215b6311b537cb2',
-    autoPlay: false
-});
-</script>
+<p>替换App的数据集名字即可使用。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"> <span class="hljs-keyword">SELECT</span> <span class="hljs-type">DATE</span>(TIMESTAMP_MICROS(event_timestamp),&quot;Asia/Hong_Kong&quot;) <span class="hljs-keyword">AS</span> first_open_dt, <br>user_pseudo_id<br></code></pre></td></tr></table></figure>
 
-<h1 id="童话风格的音游"><a href="#童话风格的音游" class="headerlink" title="童话风格的音游"></a>童话风格的音游</h1><div id="player_abce32988465c748"></div>
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-<script type="text/javascript">
-var player = new DogePlayer({
-    container: document.getElementById('player_abce32988465c748'),
-    userId: 6973,
-    vcode: 'abce32988465c748',
-    autoPlay: false
-});
-</script>
+<p>其中时区选择（”Asia&#x2F;Hong_Kong”）根据GA&#x2F;FB后台设置的时区，或你想要分析的基准填写。</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">--<span class="hljs-keyword">WHERE</span> event_name <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%YourDefineData%&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>这部分如未根据事件名划分用户则可以删去。</p>
 
                 
               </div>
@@ -348,11 +327,11 @@ var player = new DogePlayer({
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%BE%E5%AE%9A/">#设定</a>
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
       
         <a href="/tags/%E5%B0%98%E4%B8%96%E9%97%B4/">#尘世间</a>
-      
-        <a href="/tags/Demo/">#Demo</a>
       
     </div>
   
@@ -364,8 +343,8 @@ var player = new DogePlayer({
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>一些音游Demo</div>
-      <div>https://rainyiris.cc/2020/06/01/Music-Game-Demo/</div>
+      <div>BigQuery数据计算GA/FB留存</div>
+      <div>https://rainyiris.cc/2021/01/10/Data-Analytics-Google/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +356,7 @@ var player = new DogePlayer({
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年6月1日</div>
+          <div>2021年1月10日</div>
         </div>
       
       
@@ -409,18 +388,12 @@ var player = new DogePlayer({
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/10/Data-Analytics-Google/" title="BigQuery数据计算GA/FB留存">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BigQuery数据计算GA/FB留存</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/04/01/Lilliput/" title="力力普的工坊">
-                        <span class="hidden-mobile">力力普的工坊</span>
+                      <a href="/2020/06/01/Music-Game-Demo/" title="一些音游Demo">
+                        <span class="hidden-mobile">一些音游Demo</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
