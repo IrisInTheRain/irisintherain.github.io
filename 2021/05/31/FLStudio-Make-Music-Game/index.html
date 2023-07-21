@@ -16,16 +16,16 @@
   <meta name="author" content="姚麟">
   <meta name="keywords" content="">
   
-    <meta name="description" content="说明在休闲音游公司时，最开始谱面是由音乐部门的专人制作的，后为了更好地设计关卡以减少前期流失和各歌曲的难度梯度，需要给策划使用的谱面制作方法——这要求一定的可视化，更要求保持和原先专业人员制作谱面时的准确性。 为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计玩关卡后，通过特定工具转化为CSV，并通过预制好的表格转化为引">
+    <meta name="description" content="说明在休闲音游公司时，最开始谱面是由音乐部门的专人制作的，后为了更好地设计关卡以减少前期流失和各歌曲的难度梯度，需要给策划使用的谱面制作方法——这要求一定的可视化，更要求保持和原先专业人员制作谱面时的准确性。 为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计完关卡后，导出为midi格式并通过特定工具转化为CSV，再由预">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何用FL Sutdio制作音乐（节奏）游戏谱面">
 <meta property="og:url" content="https://rainyiris.cc/2021/05/31/FLStudio-Make-Music-Game/index.html">
 <meta property="og:site_name" content="Iris&#39; Wonderland">
-<meta property="og:description" content="说明在休闲音游公司时，最开始谱面是由音乐部门的专人制作的，后为了更好地设计关卡以减少前期流失和各歌曲的难度梯度，需要给策划使用的谱面制作方法——这要求一定的可视化，更要求保持和原先专业人员制作谱面时的准确性。 为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计玩关卡后，通过特定工具转化为CSV，并通过预制好的表格转化为引">
+<meta property="og:description" content="说明在休闲音游公司时，最开始谱面是由音乐部门的专人制作的，后为了更好地设计关卡以减少前期流失和各歌曲的难度梯度，需要给策划使用的谱面制作方法——这要求一定的可视化，更要求保持和原先专业人员制作谱面时的准确性。 为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计完关卡后，导出为midi格式并通过特定工具转化为CSV，再由预">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://rainyiris.cc/img/FLStudio-Make-Music-Game-Scene.jpg">
 <meta property="article:published_time" content="2021-05-31T02:31:15.000Z">
-<meta property="article:modified_time" content="2023-07-21T06:28:14.267Z">
+<meta property="article:modified_time" content="2023-07-21T06:33:17.670Z">
 <meta property="article:author" content="姚麟">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="尘世间">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          237 字
+          277 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -280,8 +280,8 @@
                 
                 <p><img src="/img/FLStudio-Make-Music-Game-Scene.jpg" srcset="/img/loading.gif" lazyload></p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>在休闲音游公司时，最开始谱面是由音乐部门的专人制作的，后为了更好地设计关卡以减少前期流失和各歌曲的难度梯度，需要给策划使用的谱面制作方法——这要求一定的可视化，更要求保持和原先专业人员制作谱面时的准确性。</p>
-<p>为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计玩关卡后，通过特定工具转化为CSV，并通过预制好的表格转化为引擎可读的格式，最后导出为Json，并通过Unity读取直接生成关卡。</p>
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
+<p>为满足以上需求，我决定仍使用FL Studio自动分析音乐的节拍，并把音轨作为可视的轨道和游戏中关卡的“节奏块”分布对应。设计完关卡后，导出为midi格式并通过特定工具转化为CSV，再由预制好的表格转化为引擎可读的格式，最后导出为Json，经Unity读取直接生成关卡。</p>
+<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><h2 id="FL-Studio上的工作"><a href="#FL-Studio上的工作" class="headerlink" title="FL Studio上的工作"></a>FL Studio上的工作</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h3 id="关卡设计"><a href="#关卡设计" class="headerlink" title="关卡设计"></a>关卡设计</h3><h2 id="导入导出工具"><a href="#导入导出工具" class="headerlink" title="导入导出工具"></a>导入导出工具</h2><h2 id="Excel自动转换"><a href="#Excel自动转换" class="headerlink" title="Excel自动转换"></a>Excel自动转换</h2><h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
                 
               </div>
             
